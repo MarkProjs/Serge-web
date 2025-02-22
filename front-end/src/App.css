@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5em;
+  background: rgb(50, 50, 50);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2.5em;
+  z-index: 1000;
+}
+
+.logo {
+  height: 4.25em;
+}
+
+.nav-links {
+  color: rgb(232, 216, 138);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.nav-links a:hover {
+  background-color: rgb(232, 216, 138);
+  color: rgb(50, 50, 50);
+  padding: 0.5em 0.5em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Sections */
+section {
+  padding-top: 5em;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+
+/* home */
+.home { 
+  background: #e3f2fd; 
+} /* Light Blue */
+
+
+/* about */
+.about { 
+  background: #c8e6c9; 
+}
+
+
+/* fleet */
+.fleet { background: 
+  #fff9c4; 
+} /* Light Yellow */
+
+
+/* contact */
+.contact { 
+  background: #ffcdd2; 
+} /* Light Red */
+
+
+/* Footer */
+.footer {
+}

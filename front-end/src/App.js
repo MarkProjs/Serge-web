@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <nav className="navbar">
-        <img src="/images/logo.png" alt="Pro Alliance" className="logo" />
+        <img src="/images/logo.jpeg" alt="Pro Alliance" className="logo" />
         <div className="nav-links">
           <Link to="home" smooth={true} duration={500} offset={-50}>Home</Link>
           <Link to="about" smooth={true} duration={500} offset={-50}>About Us</Link>
@@ -24,7 +24,7 @@ function App() {
       </nav>
 
       {/* home */}
-      <section id="home" className="section-home">
+      <section id="home" className="home">
         <h1>Pro Alliance Logistics</h1>
         <p id="slogan">Providing you with the best service without any worry of your package!</p>
         <p> Let us worry about your delivery!</p>
@@ -32,8 +32,7 @@ function App() {
       </section>
 
       {/* about */}
-      <section id="about" className="section-about">
-        <h2>About Pro Alliance Logistics</h2>
+      <section id="about" className="about">
         <p>Pro Alliance Logistics is an Amazon delivery service partner which is affiliated with Amazon Fulfillment.</p>
         <div className="about-container">
           <div className="about-desc">
@@ -43,13 +42,13 @@ function App() {
             </div>
             <div className="mission">
               <h3>Our Mission</h3>
-              <p>Our mission i to provide clients with reliable and on time delivery services by putting professionalism at the forefront of its "Client-First" approach.</p>
+              <p>Our mission is to provide clients with reliable and on time delivery services by putting professionalism at the forefront of its "Client-First" approach.</p>
             </div>
           </div>
-          <img src="/images/truck.jpg" alt="Truck" />
+          <img src="/images/team.jpeg" alt="Team" />
         </div>
         <div className="about-values">
-          <img src="/images/values.png" alt="Values" />
+          <img src="/images/values.jpg" alt="Values" />
           <div className="values">
             <h3>Our Core Values</h3>
             <p><b>Client service:</b> Client satisfaction is the measure of our success. We value  the trust clients place in our company when they choose our service,
@@ -64,7 +63,7 @@ function App() {
       </section>
       
       {/* fleet */}
-      <section id="fleet" className="section-fleet">
+      <section id="fleet" className="fleet">
         <h2>OUR FLEET</h2>
         <div className="fleet-container">
           <div className="fleet-desc">
@@ -91,7 +90,7 @@ function App() {
 
 
       {/* contact */}
-      <section id="contact" className="section-contact">
+      <section id="contact" className="contact">
         <h2>Contact Us</h2>
         <form>
           <input type="text" placeholder="Name" />
