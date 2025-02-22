@@ -4,6 +4,7 @@ import ThumbUpOutlinedIcon from '@mui/icons-material/ThumbUpOutlined';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import RestoreOutlinedIcon from '@mui/icons-material/RestoreOutlined';
 
+
 import './App.css';
 
 function App() {
@@ -74,15 +75,15 @@ function App() {
         <h2>WHY CHOOSE US</h2>
         <div className="choose-us">
           <div className="satisfaction">
-            <ThumbUpOutlinedIcon fontSize="large" />
+            <ThumbUpOutlinedIcon/>
             <p>Satisfaction Guarantee</p>
           </div>
           <div className="security">
-            <LockOutlinedIcon fontSize="large" />
+            <LockOutlinedIcon/>
             <p>Security</p>
           </div>
           <div className="on-time">
-            <RestoreOutlinedIcon fontSize="large" />
+            <RestoreOutlinedIcon/>
             <p>On-Time Delivery</p>
           </div>
         </div>
@@ -93,12 +94,23 @@ function App() {
       <section id="contact" className="section-contact">
         <h2>Contact Us</h2>
         <form>
-
+          <input type="text" placeholder="Name" />
+          <br/>
+          <input type="email" placeholder="Email" />
+          <br/>
+          <textarea placeholder="Message"></textarea>
+          <br/>
+          <button type="submit">Send</button> 
         </form>
       </section>
       
       {/* footer */}
       <footer className="footer">
+      <div className="contact-info">
+        <h3>Contact Information</h3>
+        <p>123 Main Street, Anytown, USA</p>
+        <p>Email: 5oRZP@example.com</p>
+      </div>
         <p>&copy; 2023 Pro Alliance Logistics. All rights reserved. | Pro Alliance Logistics | Designed by 
         <a href="https://main.d3cyj93qof0l71.amplifyapp.com" target="_blank" rel="noopener noreferrer"> Mark Agluba</a></p>
       </footer>
