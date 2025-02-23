@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
 h1 {
   font-size: 3em;
   margin: 0.5em 0;
@@ -26,6 +30,8 @@ b {
 
 img {
   border-radius: 1em;
+  max-width: 100%;
+  height: auto;
 }
 
 /* Navbar */
@@ -58,6 +64,12 @@ img {
   gap: 1.5em;
 }
 
+.nav-links a {
+  text-decoration: none;
+  color: rgb(232, 216, 138);
+  padding: 0.5em 1em;
+}
+
 .nav-links a:hover {
   background-color: rgb(232, 216, 138);
   color: rgb(50, 50, 50);
@@ -66,12 +78,35 @@ img {
   cursor: pointer;
 }
 
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 1em;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5em;
+    text-align: center;
+  }
+}
+
 /* Sections */
 section {
   padding: 5em 0;
   min-height: 100vh;
   font-size: 2em;
   font-weight: bold;
+}
+
+/* Responsive Sections */
+@media (max-width: 768px) {
+  section {
+    font-size: 1.5em;
+    padding: 3em 1em;
+  }
 }
 
 
@@ -138,6 +173,12 @@ section {
   gap: 2em;
 }
 
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+}
+
 .about-container img {
   height: 10em;
 
@@ -176,6 +217,12 @@ section {
   text-align: center;
 }
 
+@media (max-width: 768px) {
+  .about-values {
+    flex-direction: column;
+  }
+}
+
 
 /* fleet */
 .fleet { 
@@ -190,10 +237,17 @@ section {
 
 .fleet-container {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
 }
+
+@media (max-width: 768px) {
+  .fleet {
+    flex-direction: column;
+  }
+}
+
 
 .fleet-container p {
   color: white;
@@ -279,6 +333,12 @@ input, textarea {
   border: 1px solid #ccc;
   border-radius: 0.25em;
   font-size: 1em;
+}
+
+@media (max-width: 768px) {
+  input, textarea {
+    max-width: 100%;
+  }
 }
 
 textarea {

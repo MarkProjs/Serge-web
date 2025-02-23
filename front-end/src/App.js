@@ -1,4 +1,4 @@
-import {useEffect} from 'react';
+import {useEffect, useState} from 'react';
 import { Link, animateScroll as scroll } from "react-scroll";
 import ThumbUpOutlinedIcon from '@mui/icons-material/ThumbUpOutlined';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
@@ -11,6 +11,30 @@ function App() {
   useEffect(() => {
     document.title = "Pro Alliance Logistics | Home"
   }, []);
+
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  })
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    })
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    window.location.href = `mailto:spoppe@pccnlog.com?subject=Message from
+    ${formData.name}&body=Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0AMessage: %20${formData.message}`;
+
+    setTimeout(() => {
+      window.alert("The email has been prepared! ✅ Please check your mail app.");
+    }, 1000);
+  }
 
   function changeTitle(e) {
     document.title = `Pro Alliance Logistics | ${e.target.innerText}`
@@ -100,12 +124,12 @@ function App() {
       {/* contact */}
       <section id="contact" className="contact">
         <h2>Contact Us</h2>
-        <form >
-          <input type="text" placeholder="Name" />
+        <form onSubmit={handleSubmit}>
+          <input type="text" placeholder="Name" name="name" value={formData.name} onChange={handleChange} required/>
           <br/>
-          <input type="email" placeholder="Email" />
+          <input type="email" placeholder="Email" name="email" value={formData.email} onChange={handleChange} required/>
           <br/>
-          <textarea placeholder="Message"></textarea>
+          <textarea placeholder="Message" name="message" value={formData.message} onChange={handleChange} required></textarea>
           <button type="submit">Send</button> 
         </form>
       </section>
