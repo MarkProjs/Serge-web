@@ -11,15 +11,19 @@ function App() {
   useEffect(() => {
     document.title = "Pro Alliance Logistics | Home"
   }, []);
+
+  function changeTitle(e) {
+    document.title = `Pro Alliance Logistics | ${e.target.innerText}`
+  }
   return (
     <div className="App">
       <nav className="navbar">
         <img src="/images/logo.jpeg" alt="Pro Alliance" className="logo" />
         <div className="nav-links">
-          <Link to="home" smooth={true} duration={500} offset={-50}>Home</Link>
-          <Link to="about" smooth={true} duration={500} offset={-50}>About Us</Link>
-          <Link to="fleet" smooth={true} duration={500} offset={-50}> Our Fleet</Link>
-          <Link to="contact" smooth={true} duration={500} offset={-50}>Contact</Link>
+          <Link to="home" smooth={true} duration={500} offset={-50} onClick={changeTitle}>Home</Link>
+          <Link to="about" smooth={true} duration={500} offset={-50} onClick={changeTitle}>About Us</Link>
+          <Link to="fleet" smooth={true} duration={500} offset={-50} onClick={changeTitle}> Our Fleet</Link>
+          <Link to="contact" smooth={true} duration={500} offset={-50} onClick={changeTitle}>Contact</Link>
         </div>
       </nav>
 
@@ -50,41 +54,43 @@ function App() {
           </div>
           <img src="/images/team.jpeg" alt="Team" />
         </div>
-        <div className="about-values">
-          <img src="/images/values.jpg" alt="Values" />
-          <blockquote className="values">
-            <h3>Our Core Values</h3>
-            <br/>
-            <p><b>Client service:</b> Client satisfaction is the measure of our success. We value  the trust clients place in our company when they choose our service,
-            and we are committed to listen, adapt to client's needs, and provide quality service.</p>
-            <br/>
-            <p><b>Employees:</b> We consider our employees to  be  the pillars  of our company. We are committed to  provide a  safe environment fostering collaboration,
-            innovation, excellence and personal development.</p>
-            <br/>
-            <p><b>Security:</b> We are committed to continuously enhance the safety and security for the goods we deliver and for the employees delivering them.</p>
-          </blockquote>
-        </div>
       </section>
-      
+
+      {/* core values */}
+      <section className="about-values">
+        <img src="/images/values.jpg" alt="Values" />
+        <blockquote className="values">
+          <h3>Our Core Values</h3>
+          <br/>
+          <p><b>Client service:</b> Client satisfaction is the measure of our success. We value  the trust clients place in our company when they choose our service,
+          and we are committed to listen, adapt to client's needs, and provide quality service.</p>
+          <br/>
+          <p><b>Employees:</b> We consider our employees to  be  the pillars  of our company. We are committed to  provide a  safe environment fostering collaboration,
+          innovation, excellence and personal development.</p>
+          <br/>
+          <p><b>Security:</b> We are committed to continuously enhance the safety and security for the goods we deliver and for the employees delivering them.</p>
+        </blockquote>
+      </section>
+
       {/* fleet */}
       <section id="fleet" className="fleet">
         <h2>OUR FLEET</h2>
         <div className="fleet-container">
-          <p>As an Amazon Delivery Service Partner, we exclusively use the following type of vehicles.</p>
+          <p>As an Amazon Delivery Service Partner, we exclusively use Amazon approved vehicles.</p>
           <img src="/images/truck.jpg" alt="Truck" />
         </div>
         <h2>WHY CHOOSE US</h2>
         <div className="choose-us">
           <div className="satisfaction">
-            <ThumbUpOutlinedIcon fontSize="large"/>
+            <ThumbUpOutlinedIcon sx={{ fontSize: 50 }}/>
             <p>Satisfaction Guarantee</p>
           </div>
           <div className="security">
-            <LockOutlinedIcon fontSize="large"/>
+            <LockOutlinedIcon sx={{ fontSize: 50 }}/>
             <p>Security</p>
           </div>
           <div className="on-time">
-            <RestoreOutlinedIcon fontSize="large"/>
+            <RestoreOutlinedIcon sx={{ fontSize: 50 }}/>
             <p>On-Time Delivery</p>
           </div>
         </div>
@@ -94,7 +100,7 @@ function App() {
       {/* contact */}
       <section id="contact" className="contact">
         <h2>Contact Us</h2>
-        <form>
+        <form >
           <input type="text" placeholder="Name" />
           <br/>
           <input type="email" placeholder="Email" />
