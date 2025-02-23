@@ -4,7 +4,16 @@
   box-sizing: border-box;
 }
 
+h1 {
+  font-size: 3em;
+  margin: 0.5em 0;
+}
+
 h3 {
+  text-decoration: underline;
+}
+
+b {
   text-decoration: underline;
 }
 
@@ -58,8 +67,26 @@ section {
 
 /* home */
 .home { 
-  background: url('../public/images/homeBg.jpeg') no-repeat center center fixed; 
-} /* Light Blue */
+  background: url('../public/images/homeBg.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.home button {
+  margin-top: 2em;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  border: none;
+  background: rgb(232, 216, 138);
+  color: rgb(50, 50, 50);
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+}
 
 
 /* about */
@@ -108,10 +135,12 @@ section {
   text-align: center;
 }
 
+
 /* fleet */
 .fleet { 
   background: #fff9c4; 
 } /* Light Yellow */
+
 
 
 /* contact */
@@ -120,6 +149,23 @@ section {
 } /* Light Red */
 
 
+
 /* Footer */
 .footer {
+  background: rgb(50, 50, 50);
+  color: rgb(232, 216, 138);
+  padding: 1em 0;
+  text-align: center;
 }
+
+.footer a {
+  color: rgb(232, 216, 138);
+  text-decoration: underline;
+  cursor: pointer;
+  margin: 0 0.2em;
+}
+
+#copyright {
+  margin-top: 1em;
+}
+

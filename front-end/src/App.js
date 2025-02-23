@@ -25,9 +25,11 @@ function App() {
 
       {/* home */}
       <section id="home" className="home">
-        <h1>Pro Alliance Logistics</h1>
-        <p id="slogan">Providing you with the best service without any worry of your package!</p>
-        <p> Let us worry about your delivery!</p>
+        <div className="home-container">
+          <h1>Pro Alliance Logistics</h1>
+          <p id="slogan">Providing you with the best service without any worry of your package!<br/>
+          Let us worry about your delivery!</p>
+        </div>
         <button onClick={() => scroll.scrollToBottom()}>Contact Us</button>
       </section>
 
@@ -107,12 +109,12 @@ function App() {
       
       {/* footer */}
       <footer className="footer">
-      <div className="contact-info">
-        <h3>Contact Information</h3>
-        <p>123 Main Street, Anytown, USA</p>
-        <p>Email: 5oRZP@example.com</p>
-      </div>
-        <p>&copy; 2023 Pro Alliance Logistics. All rights reserved. | Pro Alliance Logistics | Designed by 
+        <div className="contact-info">
+          <h3>Contact Information</h3>
+          <p>123 Main Street, Anytown, USA</p>
+          <p>Email: 5oRZP@example.com</p>
+        </div>
+        <p id="copyright">&copy; 2023 Pro Alliance Logistics. All rights reserved. | Pro Alliance Logistics | Designed by 
         <a href="https://main.d3cyj93qof0l71.amplifyapp.com" target="_blank" rel="noopener noreferrer"> Mark Agluba</a></p>
       </footer>
     </div>
