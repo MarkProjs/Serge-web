@@ -50,9 +50,41 @@ img {
   z-index: 1000;
 }
 
+
+.menu-icon {
+  display: none;
+  color: rgb(232, 216, 138);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+
+  .menu-icon {
+    display: flex; /* Show burger icon */
+  }
+
+  .nav-links.open {
+    display: flex; /* Show links when the menu is open */
+    flex-direction: column; /* Stack links vertically */
+    position: absolute; /* Position it to cover the screen */
+    top: 5em; /* Position below the navbar */
+    left: 0; /* Align to the left */
+    right: 0; /* Stretch to the right */
+    background-color: rgb(50, 50, 50); /* Same background as the navbar */
+    padding: 1em; /* Add some padding */
+    z-index: 999; /* Ensure it appears above other content *//* Show links when the menu is open */
+  }
+}
+
 .logo {
   height: 4.25em;
 }
+
+
 
 .nav-links {
   color: rgb(232, 216, 138);
@@ -62,6 +94,7 @@ img {
   display: flex;
   align-items: center;
   gap: 1.5em;
+  transition: max-height 0.3s ease-in-out;
 }
 
 .nav-links a {
@@ -74,24 +107,10 @@ img {
   background-color: rgb(232, 216, 138);
   color: rgb(50, 50, 50);
   padding: 0.5em 0.5em;
-  border-radius: 5px;
+  border-radius: 0.5em;
   cursor: pointer;
 }
 
-/* Responsive Navbar */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 1em;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5em;
-    text-align: center;
-  }
-}
 
 /* Sections */
 section {

@@ -3,8 +3,8 @@ import { Link, animateScroll as scroll } from "react-scroll";
 import ThumbUpOutlinedIcon from '@mui/icons-material/ThumbUpOutlined';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import RestoreOutlinedIcon from '@mui/icons-material/RestoreOutlined';
-
-
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 import './App.css';
 
 function App() {
@@ -18,6 +18,8 @@ function App() {
     email: "",
     message: ""
   })
+
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -39,11 +41,18 @@ function App() {
   function changeTitle(e) {
     document.title = `Pro Alliance Logistics | ${e.target.innerText}`
   }
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  }
   return (
     <div className="App">
       <nav className="navbar">
         <img src="/images/logo.jpeg" alt="Pro Alliance" className="logo" />
-        <div className="nav-links">
+        <div className="menu-icon" onClick={toggleMenu}>
+          {menuOpen ? <CloseIcon /> : <MenuIcon />}
+        </div>
+        <div className={menuOpen ? "nav-links.open" : "nav-links"}>
           <Link to="home" smooth={true} duration={500} offset={-50} onClick={changeTitle}>Home</Link>
           <Link to="about" smooth={true} duration={500} offset={-50} onClick={changeTitle}>About Us</Link>
           <Link to="fleet" smooth={true} duration={500} offset={-50} onClick={changeTitle}> Our Fleet</Link>
