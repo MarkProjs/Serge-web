@@ -14,10 +14,10 @@ h1 {
 }
 
 h2 {
-  padding-left: 2em;
-  margin-bottom: 1em;
+  color: rgb(232, 216, 138);
   font-size: 2em;
   text-decoration: underline;
+  text-align: center;
 }
 
 h3 {
@@ -33,6 +33,7 @@ img {
   max-width: 100%;
   height: auto;
 }
+
 
 /* Navbar */
 .navbar {
@@ -57,34 +58,9 @@ img {
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
-
-
-  .menu-icon {
-    display: flex; /* Show burger icon */
-  }
-
-  .nav-links.open {
-    display: flex; /* Show links when the menu is open */
-    flex-direction: column; /* Stack links vertically */
-    position: absolute; /* Position it to cover the screen */
-    top: 5em; /* Position below the navbar */
-    left: 0; /* Align to the left */
-    right: 0; /* Stretch to the right */
-    background-color: rgb(50, 50, 50); /* Same background as the navbar */
-    padding: 1em; /* Add some padding */
-    z-index: 999; /* Ensure it appears above other content *//* Show links when the menu is open */
-  }
-}
-
 .logo {
   height: 4.25em;
 }
-
-
 
 .nav-links {
   color: rgb(232, 216, 138);
@@ -94,14 +70,10 @@ img {
   display: flex;
   align-items: center;
   gap: 1.5em;
+  padding: 0.5em 1em;
   transition: max-height 0.3s ease-in-out;
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: rgb(232, 216, 138);
-  padding: 0.5em 1em;
-}
 
 .nav-links a:hover {
   background-color: rgb(232, 216, 138);
@@ -111,11 +83,45 @@ img {
   cursor: pointer;
 }
 
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
 
+  .menu-icon {
+    display: flex;
+    color: rgb(232, 216, 138);
+    cursor: pointer;
+  }
+
+  .smallScreen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 5em;
+    left: 0;
+    width: 100%;
+    background-color: rgb(50, 50, 50);
+    color: rgb(232, 216, 138);
+    padding: 1em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .smallScreen a:hover {
+    text-decoration: underline;
+    color: rgb(232, 216, 138);
+    padding: 0.5em 0.5em;
+    border-radius: 0.5em;
+    cursor: pointer;
+  }
+
+}
 /* Sections */
 section {
   padding: 5em 0;
   min-height: 100vh;
+  width: 100%;
   font-size: 2em;
   font-weight: bold;
 }
@@ -177,9 +183,6 @@ section {
   flex-direction: column;
 }
 
-.about h2 {
-  color: rgb(232, 216, 138);
-}
 
 .about #about-p {
   padding-left: 2em;
@@ -245,12 +248,8 @@ section {
 
 /* fleet */
 .fleet { 
-  background: rgb(50, 50, 50); 
-}
-
-.fleet h2 {
-  color: rgb(232, 216, 138);
-  text-align: center;
+  background: rgb(50, 50, 50);
+  width: 100%;
 }
 
 
@@ -275,7 +274,7 @@ section {
 
 .fleet-container img {
   height: 10em;
-  margin: 2em 0 1.5em 3.5em;
+  margin: 2em 0 1.5em 0;
 }
 
 .choose-us {
@@ -283,7 +282,6 @@ section {
   align-items: center;
   justify-content: space-around;
   gap: 2em;
-  margin: 2em 0 0 0;
   color: white;
 }
 
@@ -325,7 +323,7 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.27); /* Light white overlay */
+  background: rgba(255, 255, 255, 0.30); /* Light white overlay */
   z-index: 0;
 }
 
@@ -403,4 +401,3 @@ button:hover {
 #copyright {
   margin-top: 1em;
 }
-

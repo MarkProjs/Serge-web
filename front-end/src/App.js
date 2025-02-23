@@ -52,7 +52,7 @@ function App() {
         <div className="menu-icon" onClick={toggleMenu}>
           {menuOpen ? <CloseIcon /> : <MenuIcon />}
         </div>
-        <div className={menuOpen ? "nav-links.open" : "nav-links"}>
+        <div className={menuOpen ? 'smallScreen' : 'nav-links'}>
           <Link to="home" smooth={true} duration={500} offset={-50} onClick={changeTitle}>Home</Link>
           <Link to="about" smooth={true} duration={500} offset={-50} onClick={changeTitle}>About Us</Link>
           <Link to="fleet" smooth={true} duration={500} offset={-50} onClick={changeTitle}> Our Fleet</Link>
