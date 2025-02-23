@@ -35,7 +35,7 @@ function App() {
 
       {/* about */}
       <section id="about" className="about">
-        <h2>About Us</h2>
+        <h2>ABOUT US</h2>
         <p id="about-p">Pro Alliance Logistics is an Amazon delivery service partner which is affiliated with Amazon Fulfillment.</p>
         <div className="about-container">
           <div className="about-desc">
@@ -70,23 +70,21 @@ function App() {
       <section id="fleet" className="fleet">
         <h2>OUR FLEET</h2>
         <div className="fleet-container">
-          <div className="fleet-desc">
-            <p>As an Amazon Delivery Service Partner, we exclusively use the following type of vehicles.</p>
-            <img src="/images/truck.jpg" alt="Truck" />
-          </div>
+          <p>As an Amazon Delivery Service Partner, we exclusively use the following type of vehicles.</p>
+          <img src="/images/truck.jpg" alt="Truck" />
         </div>
         <h2>WHY CHOOSE US</h2>
         <div className="choose-us">
           <div className="satisfaction">
-            <ThumbUpOutlinedIcon/>
+            <ThumbUpOutlinedIcon fontSize="large"/>
             <p>Satisfaction Guarantee</p>
           </div>
           <div className="security">
-            <LockOutlinedIcon/>
+            <LockOutlinedIcon fontSize="large"/>
             <p>Security</p>
           </div>
           <div className="on-time">
-            <RestoreOutlinedIcon/>
+            <RestoreOutlinedIcon fontSize="large"/>
             <p>On-Time Delivery</p>
           </div>
         </div>
@@ -102,7 +100,6 @@ function App() {
           <input type="email" placeholder="Email" />
           <br/>
           <textarea placeholder="Message"></textarea>
-          <br/>
           <button type="submit">Send</button> 
         </form>
       </section>
