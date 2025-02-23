@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+h3 {
+  text-decoration: underline;
+}
+
 
 /* Navbar */
 .navbar {
@@ -47,10 +51,6 @@
 section {
   padding-top: 5em;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: 2em;
   font-weight: bold;
 }
@@ -58,19 +58,59 @@ section {
 
 /* home */
 .home { 
-  background: #e3f2fd; 
+  background: url('../public/images/homeBg.jpeg') no-repeat center center fixed; 
 } /* Light Blue */
 
 
 /* about */
 .about { 
-  background: #c8e6c9; 
+  background: #c8e6c9;
+  display: flex;
+  flex-direction: column;
 }
 
+.about h2, .about #about-p {
+  padding-left: 2em;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  padding: 2.5em;
+  gap: 2em;
+}
+
+.about-container img {
+  height: 10em;
+  border-radius: 1em;
+
+}
+
+.about-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 2em;
+}
+.about-values {
+  display: flex;
+  align-items: center;
+  padding: 2.5em;
+  gap: 1em;
+}
+
+.about-values img {
+  height: 10em;
+  border-radius: 1em;
+}
+
+.values {
+  text-align: center;
+}
 
 /* fleet */
-.fleet { background: 
-  #fff9c4; 
+.fleet { 
+  background: #fff9c4; 
 } /* Light Yellow */
 
 

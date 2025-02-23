@@ -33,7 +33,8 @@ function App() {
 
       {/* about */}
       <section id="about" className="about">
-        <p>Pro Alliance Logistics is an Amazon delivery service partner which is affiliated with Amazon Fulfillment.</p>
+        <h2>About Us</h2>
+        <p id="about-p">Pro Alliance Logistics is an Amazon delivery service partner which is affiliated with Amazon Fulfillment.</p>
         <div className="about-container">
           <div className="about-desc">
             <div className="vision">
@@ -49,8 +50,9 @@ function App() {
         </div>
         <div className="about-values">
           <img src="/images/values.jpg" alt="Values" />
-          <div className="values">
+          <blockquote className="values">
             <h3>Our Core Values</h3>
+            <br/>
             <p><b>Client service:</b> Client satisfaction is the measure of our success. We value  the trust clients place in our company when they choose our service,
             and we are committed to listen, adapt to client's needs, and provide quality service.</p>
             <br/>
@@ -58,7 +60,7 @@ function App() {
             innovation, excellence and personal development.</p>
             <br/>
             <p><b>Security:</b> We are committed to continuously enhance the safety and security for the goods we deliver and for the employees delivering them.</p>
-          </div>
+          </blockquote>
         </div>
       </section>
       
