@@ -147,8 +147,8 @@ function App() {
       <footer className="footer">
         <div className="contact-info">
           <h3>Contact Information</h3>
-          <p>123 Main Street, Anytown, USA</p>
-          <p>Email: 5oRZP@example.com</p>
+          <p>Phone: +1 (514) 349-4733</p>
+          <p>Email: spoppe@pccnlog.com</p>
         </div>
         <p id="copyright">&copy; 2023 Pro Alliance Logistics. All rights reserved. | Pro Alliance Logistics | Designed by 
         <a href="https://main.d3cyj93qof0l71.amplifyapp.com" target="_blank" rel="noopener noreferrer"> Mark Agluba</a></p>
