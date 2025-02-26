@@ -327,7 +327,7 @@ section {
 /* contact */
 .contact {
   position: relative;
-  background: url('../public/images/contact.jpg') no-repeat center fixed;
+  background: url('../public/images/contact.jpg') no-repeat center center fixed;
   background-size: cover;
 }
 
