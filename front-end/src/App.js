@@ -120,7 +120,7 @@ function App() {
         <div className="choose-us">
           <div className="satisfaction">
             <ThumbUpOutlinedIcon sx={{ fontSize: 50 }}/>
-            <p>Satisfaction Guarantee</p>
+            <p>Satisfaction Guaranteed</p>
           </div>
           <div className="security">
             <LockOutlinedIcon sx={{ fontSize: 50 }}/>
