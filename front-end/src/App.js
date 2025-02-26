@@ -73,7 +73,8 @@ function App() {
       {/* about */}
       <section id="about" className="about">
         <h2>ABOUT US</h2>
-        <p id="about-p">Pro Alliance Logistics is an Amazon delivery service partner which is affiliated with Amazon Fulfillment.</p>
+        <p id="about-p">Pro Alliance Logistics specializes in courier delivery services, 
+        we offer deliver services to Amazon Logistics through the Delivery Service Partner program but are always looking for new clients.</p>
         <div className="about-container">
           <div className="about-desc">
             <div className="vision">
@@ -109,7 +110,10 @@ function App() {
       <section id="fleet" className="fleet">
         <h2>OUR FLEET</h2>
         <div className="fleet-container">
-          <p>As an Amazon Delivery Service Partner, we exclusively use Amazon approved vehicles.</p>
+          <p>We run a fleet made of cargo vans such as Ford Transit, 
+          RAM Promaster 3500 and Mercedes Sprinter with a cargo capacity ranging from 370 to 440 cubic feet.</p> <br/>
+          <p>Pro Alliance is an eco friendly company, our goal is to operate a zero emission fleet by the end of 2026 
+          and replace our whole fleet with electric vehicles. </p>
           <img src="/images/truck.jpg" alt="Truck" />
         </div>
         <h2>WHY CHOOSE US</h2>
@@ -120,7 +124,7 @@ function App() {
           </div>
           <div className="security">
             <LockOutlinedIcon sx={{ fontSize: 50 }}/>
-            <p>Security</p>
+            <p>Safety</p>
           </div>
           <div className="on-time">
             <RestoreOutlinedIcon sx={{ fontSize: 50 }}/>
